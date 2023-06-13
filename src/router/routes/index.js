@@ -1,5 +1,5 @@
 import auth from "./auth";
-import dashboard from "./dashboard";
+import dashboard from "./masterdata";
 
 const routes = [
     dashboard,

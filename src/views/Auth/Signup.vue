@@ -9,16 +9,16 @@
   <main class="main-content mt-0">
     <div
       class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
-      style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;"
     >
-      <span class="mask bg-gradient-dark opacity-6"></span>
+    <!-- style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;" -->
+      <span class="mask bg-dark opacity-9"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5 text-center mx-auto">
             <h1 class="text-white mb-2 mt-5">Welcome!</h1>
             <p
               class="text-lead text-white"
-            >Use these awesome forms to login or create new account in your project for free.</p>
+            >Monitoring Stock Opname</p>
           </div>
         </div>
       </div>
@@ -28,9 +28,9 @@
         <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
           <div class="card z-index-0">
             <div class="card-header text-center pt-4">
-              <h5>Register with</h5>
+              <h5>Register</h5>
             </div>
-            <div class="row px-xl-5 px-sm-4 px-3">
+            <!-- <div class="row px-xl-5 px-sm-4 px-3">
               <div class="col-3 ms-auto px-1">
                 <a class="btn btn-outline-light w-100" href="javascript:;">
                   <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
@@ -94,7 +94,7 @@
                   class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3"
                 >or</p>
               </div>
-            </div>
+            </div> -->
             <div class="card-body">
               <form @submit.prevent="submitReg">
                 <argon-input v-model="input.name" type="text" placeholder="Name" aria-label="Name" />
@@ -115,7 +115,7 @@
                 <p class="text-sm mt-3 mb-0">
                   Already have an account?
                   <a
-                    href="javascript:;"
+                    href="http://localhost:5173/auth/signin"
                     class="text-dark font-weight-bolder"
                   >Sign in</a>
                 </p>

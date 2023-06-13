@@ -14,9 +14,8 @@
               href="https://www.creative-tim.com"
               class="font-weight-bold"
               target="_blank"
-              >Creative Tim</a
+              >Team 3</a
             >
-            for a better web.
           </div>
         </div>
         <div class="col-lg-6">

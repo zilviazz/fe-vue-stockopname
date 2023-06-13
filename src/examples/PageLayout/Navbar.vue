@@ -9,7 +9,7 @@
         class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
         :class="darkMode ? 'text-black' : 'text-white'"
         to="/"
-        >To do list</router-link
+        >Stock Opname</router-link
       >
       <button
         class="shadow-none navbar-toggler ms-2"
@@ -32,7 +32,7 @@
             <router-link
               class="nav-link d-flex align-items-center me-2 active"
               aria-current="page"
-              to="/dashboard"
+              to="/masterdata/dashboard"
             >
               <i
                 class="fa fa-chart-pie opacity-6 me-1"
@@ -42,7 +42,7 @@
               Dashboard
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link me-2" to="/dashboard/profile">
               <i
                 class="fa fa-user opacity-6 me-1"
@@ -51,7 +51,7 @@
               ></i>
               Profile
             </router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link class="nav-link me-2" to="/auth/signup">
               <i
@@ -73,7 +73,7 @@
             </router-link>
           </li>
         </ul>
-        <ul class="navbar-nav d-lg-block d-none">
+        <!-- <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
             <a
               href="https://www.creative-tim.com/product/vue-argon-dashboard"
@@ -82,7 +82,7 @@
               >Free download</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </nav>

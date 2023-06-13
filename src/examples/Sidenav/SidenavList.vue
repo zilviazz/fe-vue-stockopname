@@ -6,7 +6,7 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <sidenav-item
-          url="/dashboard"
+          url="/masterdata/dashboard"
           :class="getRoute() === 'dashboard' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Dashboard'"
         >
@@ -17,9 +17,9 @@
       </li>
       <li class="nav-item">
         <sidenav-item
-          url="/dashboard/tables"
-          :class="getRoute() === 'tables' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'"
+          url="/masterdata/tablespart"
+          :class="getRoute() === 'tablespart' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الجداول' : 'Part'"
         >
           <template v-slot:icon>
             <i
@@ -28,17 +28,56 @@
           </template>
         </sidenav-item>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <sidenav-item
-          url="/dashboard/billing"
-          :class="getRoute() === 'billing' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Billing'"
+          url="/masterdata/tablesrack"
+          :class="getRoute() === 'tablesrack' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Rack'"
         >
-          <template v-slot:icon>
-            <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+        <template v-slot:icon>
+            <i
+              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+            ></i>
           </template>
         </sidenav-item>
-      </li> -->
+      </li>
+      <li class="nav-item">
+        <sidenav-item
+          url="/masterdata/tablessupplier"
+          :class="getRoute() === 'tablessupplier' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : 'Supplier'"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
+          url="/masterdata/tables"
+          :class="getRoute() === 'tables' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Work Order'"
+        >
+        <template v-slot:icon>
+            <i
+              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+            ></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
+          url="/masterdata/tables"
+          :class="getRoute() === 'tables' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Delivery Order'"
+        >
+        <template v-slot:icon>
+            <i
+              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+            ></i>
+          </template>
+        </sidenav-item>
+      </li>
       <li class="mt-3 nav-item">
         <h6
           v-if="this.$store.state.isRTL"
@@ -55,17 +94,7 @@
           ACCOUNT PAGES
         </h6>
       </li>
-      <!-- <li class="nav-item">
-        <sidenav-item
-          url="/dashboard/profile"
-          :class="getRoute() === 'profile' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : 'Profile'"
-        >
-          <template v-slot:icon>
-            <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-          </template>
-        </sidenav-item>
-      </li> -->
+      
       <li class="nav-item">
         <sidenav-item
           url="/auth/signin"
