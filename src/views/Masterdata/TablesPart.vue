@@ -121,6 +121,7 @@ export default {
     <div>
       <div class="btn-container">
         <div class="search">
+          <i class="fas fa-search" aria-hidden="true"></i>
             <input type="text" id="search-id" v-model="searchId" class="search-input" placeholder="Type ID here">
             <argon-button color="success" @click="search" class="search-button">Cari</argon-button>
         </div>
@@ -132,6 +133,15 @@ export default {
       <div class="popup">
         <h2>New Part</h2>
         <form @submit.prevent="addForm" @reset="resetForm">
+          
+        <div>
+        <label for="selected-item">ID Rack:</label>
+        <select id="selected-item" v-model="selectedItem">
+          <option v-for="item in items" :key="item.id" :value="item.id">{{ item.name }}</option>
+        </select>
+        <!-- <p>Item yang dipilih: {{ selectedItem }}</p> -->
+        </div>
+
           <base-input
             v-model="input.part_name"
             class="input"
@@ -147,6 +157,7 @@ export default {
             required
           ></base-input>
           <br />
+
 
           <!-- <base-input
             v-model="input.category"
@@ -245,7 +256,7 @@ button {
   width: 200px;
   padding: 8px;
   margin-right: 10px;
-  padding-left: 700px;
+  padding-left: 650px;
 }
 .search{
     padding: 10px 20px 15px 0px;
@@ -259,8 +270,6 @@ button {
   box-sizing: border-box;
 
 }
-
-
 .search-results {
   width: 100%;
   margin-top: 20px;
@@ -275,6 +284,12 @@ button {
 
 .search-results th {
   background-color: #f2f2f2;
+}
+
+i{
+  color: #f2f2f2;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
 </style>

@@ -21,7 +21,7 @@ export default {
     editing: false,
     // UI
     table: {
-      columns: ['id', 'name', 'address', 'phone'],
+      columns: ['id_supplier', 'name_supplier', 'address_supplier', 'phone_supplier'],
       actions: [
         {
           title: 'Edit',
@@ -121,6 +121,7 @@ export default {
     <div>
       <div class="btn-container">
         <div class="search">
+          <i class="fas fa-search" aria-hidden="true"></i>
             <input type="text" id="search-id" v-model="searchId" class="search-input" placeholder="Type ID here">
             <argon-button color="success" @click="search" class="search-button">Cari</argon-button>
         </div>
@@ -246,7 +247,7 @@ button {
   width: 200px;
   padding: 8px;
   margin-right: 10px;
-  padding-left: 700px;
+  padding-left: 650px;
 }
 .search{
     padding: 10px 20px 15px 0px;
@@ -260,7 +261,6 @@ button {
   box-sizing: border-box;
 
 }
-
 
 .search-results {
   width: 100%;
@@ -276,6 +276,12 @@ button {
 
 .search-results th {
   background-color: #f2f2f2;
+}
+
+i{
+  color: #f2f2f2;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
 </style>

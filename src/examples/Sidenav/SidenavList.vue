@@ -11,7 +11,7 @@
           :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Dashboard'"
         >
           <template v-slot:icon>
-            <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+            <i class="ni ni-chart-bar-32 text-primary text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
@@ -23,7 +23,7 @@
         >
           <template v-slot:icon>
             <i
-              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              class="ni ni-box-2 text-warning text-sm opacity-10"
             ></i>
           </template>
         </sidenav-item>
@@ -36,7 +36,7 @@
         >
         <template v-slot:icon>
             <i
-              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              class="ni ni-app text-primary text-sm opacity-10"
             ></i>
           </template>
         </sidenav-item>
@@ -73,7 +73,7 @@
         >
         <template v-slot:icon>
             <i
-              class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              class="ni ni-calendar-grid-58 text-primary text-sm opacity-10"
             ></i>
           </template>
         </sidenav-item>
