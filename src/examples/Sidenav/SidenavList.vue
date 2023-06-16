@@ -54,7 +54,7 @@
       </li>
       <li class="nav-item">
         <sidenav-item
-          url="/masterdata/tables"
+          url="/masterdata/tableswo"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Work Order'"
         >
@@ -67,7 +67,7 @@
       </li>
       <li class="nav-item">
         <sidenav-item
-          url="/masterdata/tables"
+          url="/masterdata/tablesdo"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الفواتیر' : 'Delivery Order'"
         >

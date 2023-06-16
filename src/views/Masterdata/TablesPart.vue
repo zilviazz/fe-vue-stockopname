@@ -119,7 +119,15 @@ export default {
 <template>
   <div>
     <div>
-    <argon-button @click="openForm">New Part</argon-button>
+      <div class="btn-container">
+        <div class="search">
+            <input type="text" id="search-id" v-model="searchId" class="search-input" placeholder="Type ID here">
+            <argon-button color="success" @click="search" class="search-button">Cari</argon-button>
+        </div>
+        <div class="btn-new">
+          <argon-button color="success" @click="openForm">Add</argon-button>
+        </div>
+      </div>
     <div v-if="isFormOpen" class="popup-container">
       <div class="popup">
         <h2>New Part</h2>
@@ -157,9 +165,9 @@ export default {
   </div>
 
 
-    <hr />
+    <!-- <hr />
 
-    <!-- <ol class="list">
+    <ol class="list">
       <template v-for="(item, index) in g$list" :key="index">
         <li
           @dblclick="() => toggleCompleted(index)"
@@ -183,9 +191,9 @@ export default {
           {{ item?.description ? `- ${item.description}` : '' }}
         </li>
       </template>
-    </ol> -->
+    </ol>
 
-    <hr />
+    <hr /> -->
 
     <base-table
       :data="g$part"
@@ -198,6 +206,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.btn-container{
+  display: flex;
+}
 .list {
   margin-block: 0.5rem;
 }
@@ -229,6 +240,41 @@ button {
   padding: 20px;
   border-radius: 5px;
   width: 50%;
+}
+.btn-new{
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+  padding-left: 700px;
+}
+.search{
+    padding: 10px 20px 15px 0px;
+  }
+  .search-input {
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+
+.search-results {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.search-results th,
+.search-results td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-results th {
+  background-color: #f2f2f2;
 }
 
 </style>

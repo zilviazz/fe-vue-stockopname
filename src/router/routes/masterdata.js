@@ -21,6 +21,18 @@ const dashboard = {
             meta: { auth: true },
         },
         {
+            path: "tableswo",
+            name: "WO Table",
+            component: () => import('@/views/Masterdata/TablesWo.vue'),
+            meta: { auth: true },
+        },
+        {
+            path: "tablesdo",
+            name: "DO Table",
+            component: () => import('@/views/Masterdata/TablesDo.vue'),
+            meta: { auth: true },
+        },
+        {
             path: "todo",
             name: "ToDo",
             component: () => import('@/views/Masterdata/ToDo.vue'),

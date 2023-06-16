@@ -3,12 +3,12 @@ const auth = {
     name: 'Auth',
     children:[
         {
-            path: "/auth/signin",
+            path: "auth/signin",
             name: "Signin",
             component: () => import('@/views/Auth/Signin.vue')
         },
         {
-            path: "/auth/signup",
+            path: "auth/signup",
             name: "Signup",
             component: () => import('@/views/Auth/Signup.vue')
         }
